@@ -1,1 +1,1 @@
-10 days of stastistics solutions
+10 days of statistics solutions
