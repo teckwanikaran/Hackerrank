@@ -1,27 +1,17 @@
-import math
-import os
-import random
-import re
-import sys
+#!/bin/python3
 
-# Complete the rotLeft function below.
 def rotLeft(a, d):
-    return a[d:] + a[:d]
+    return a[d:] + a[:d] # List slicing
 
+def main():
+    l = input().split() 
+    n = int(l[0]) # Extracting the first element
+    d = int(l[1]) # Extracting the second element
+    # Creating the list of input values
+    a = list(map(int, input().rstrip().split()))
+    output = rotLeft(a, d) # Calling the rotLeft function
+    
+    print(' '.join(map(str, output)))
+    
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
-    nd = raw_input().split()
-
-    n = int(nd[0])
-
-    d = int(nd[1])
-
-    a = map(int, raw_input().rstrip().split())
-
-    result = rotLeft(a, d)
-
-    fptr.write(' '.join(map(str, result)))
-    fptr.write('\n')
-
-    fptr.close()
+    main()
